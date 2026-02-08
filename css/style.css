@@ -19,7 +19,7 @@
   --font-heading: Impact, 'Arial Narrow', 'Haettenschweiler', sans-serif;
   --font-mono: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
 
-  --nav-height: 120px;
+  --nav-height: 102px;
   --max-width: 1100px;
   --section-padding: 80px 24px;
   --skew: -3deg;
@@ -176,7 +176,7 @@ ul {
 }
 
 .nav-logo {
-  height: 108px;
+  height: 92px;
   display: flex;
   align-items: center;
   transition: opacity 0.2s, transform 0.2s;
@@ -314,7 +314,7 @@ ul {
 }
 
 .hero-logo {
-  max-width: 1280px;
+  max-width: 1088px;
   margin: 0 auto 16px;
   filter: drop-shadow(0 4px 24px rgba(198, 40, 40, 0.15));
 }
@@ -794,7 +794,7 @@ ul {
 }
 
 .footer-brand .nav-logo {
-  height: 64px;
+  height: 54px;
 }
 
 .footer-brand p {
@@ -911,7 +911,7 @@ ul {
 
   /* Hero mobile */
   .hero-logo {
-    max-width: 800px;
+    max-width: 680px;
   }
 
   .hero-heading {
@@ -952,7 +952,7 @@ ul {
 
 @media (max-width: 480px) {
   .hero-logo {
-    max-width: 600px;
+    max-width: 510px;
   }
 
   .hero-heading {

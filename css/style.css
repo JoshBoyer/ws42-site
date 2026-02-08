@@ -314,7 +314,7 @@ ul {
 }
 
 .hero-logo {
-  max-width: 500px;
+  max-width: 640px;
   margin: 0 auto 16px;
   filter: drop-shadow(0 4px 24px rgba(198, 40, 40, 0.15));
 }
@@ -911,7 +911,7 @@ ul {
 
   /* Hero mobile */
   .hero-logo {
-    max-width: 300px;
+    max-width: 400px;
   }
 
   .hero-heading {
@@ -952,7 +952,7 @@ ul {
 
 @media (max-width: 480px) {
   .hero-logo {
-    max-width: 240px;
+    max-width: 300px;
   }
 
   .hero-heading {

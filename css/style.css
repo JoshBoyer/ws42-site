@@ -176,7 +176,7 @@ ul {
 }
 
 .nav-logo {
-  height: 48px;
+  height: 54px;
   display: flex;
   align-items: center;
   transition: opacity 0.2s, transform 0.2s;

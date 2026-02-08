@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building a Utility Knife from Scratch — Workshop 42</title>
+  <meta name="description" content="Designing a gear-driven 3D printed clone of the Piachi G9 utility knife with three blade positions.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../assets/images/Logo.png" alt="Workshop 42">
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#blog">Blog</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Post -->
+  <article class="post">
+    <div class="container">
+      <div class="post-header">
+        <a href="../index.html#blog" class="post-back">&larr; Back to Blog</a>
+        <h1 class="post-title">Building a Utility Knife from Scratch</h1>
+        <p class="post-meta">
+          <span>February 2026</span>
+          <span class="post-status post-status--in-progress">In Progress</span>
+        </p>
+      </div>
+
+      <!-- Quick Info -->
+      <div class="post-info">
+        <div class="post-info-grid">
+          <div class="post-info-item">
+            <span class="post-info-label">Category</span>
+            <span class="post-info-value">Design Challenge</span>
+          </div>
+          <div class="post-info-item">
+            <span class="post-info-label">Printer</span>
+            <span class="post-info-value">Bambu Lab A1 Mini</span>
+          </div>
+          <div class="post-info-item">
+            <span class="post-info-label">Hardware</span>
+            <span class="post-info-value">M3 screws, magnets, standard utility blade</span>
+          </div>
+          <div class="post-info-item">
+            <span class="post-info-label">Release</span>
+            <span class="post-info-value">Planned for Makerworld</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-content">
+        <h2>What It Is</h2>
+        <p>A fully 3D printed clone of the Piachi G9 utility knife. The form factor caught my eye as a pure engineering challenge &mdash; compact, satisfying mechanism, interesting geometry. I wanted to see if I could build the whole thing from a printer and a handful of screws.</p>
+
+        <img src="../assets/images/PiachiG9_5.jpg" alt="Piachi G9 clone - closed position">
+
+        <p>The core is a gear system that pivots on an M3 screw. The gear has three positions with divots for alignment at each stop, and it drives a second M3 screw to control what the blade cover can do.</p>
+
+        <ul>
+          <li><strong>Back position</strong> &mdash; locks the blade cover shut. Safe for your pocket.</li>
+          <li><strong>Middle position</strong> &mdash; opens the case just enough to swap the blade.</li>
+          <li><strong>Right position</strong> &mdash; full open for quick deploy. Flick your wrist and the blade drops out, close the case to lock it in.</li>
+        </ul>
+
+        <p>Under the hood there's a channel system that physically blocks the cover from opening when the gear is in the back position. Magnets handle blade alignment and help keep everything seated when closed.</p>
+
+        <img src="../assets/images/PiachiG9_2.jpg" alt="Piachi G9 clone - blade mechanism detail">
+
+        <h2>Status Updates</h2>
+        <div class="post-timeline">
+          <div class="timeline-entry">
+            <div class="timeline-date">Early February 2026</div>
+            <div class="timeline-text">Started CAD work on the body and gear mechanism. Worked through several iterations on the pivot geometry and divot spacing.</div>
+          </div>
+          <div class="timeline-entry">
+            <div class="timeline-date">Mid February 2026</div>
+            <div class="timeline-text">
+              First prints of the internal components on the A1 Mini. Getting the tolerances right for the gear to feel solid took a few rounds.
+              <img src="../assets/images/PiachiG9_Printing.jpg" alt="Internal parts printing on Bambu Lab A1 Mini">
+            </div>
+          </div>
+          <div class="timeline-entry timeline-entry--current">
+            <div class="timeline-date">February 2026 — Current</div>
+            <div class="timeline-text">
+              Working prototype assembled. Blade extends, locks, and retracts across all three gear positions. Magnets are seated and alignment is good. Still refining the fit and feel before release.
+              <img src="../assets/images/PiachiG9_4.jpg" alt="Piachi G9 clone - blade extended">
+            </div>
+          </div>
+        </div>
+
+        <h2>What's Next</h2>
+        <p>Tightening up the tolerances on the gear action and doing a final round of test prints. Once I'm happy with the feel, this one goes on Makerworld.</p>
+
+        <img src="../assets/images/PiachiG9_3.jpg" alt="Piachi G9 clone - back view">
+      </div>
+    </div>
+  </article>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        &copy; 2026 Workshop 42. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

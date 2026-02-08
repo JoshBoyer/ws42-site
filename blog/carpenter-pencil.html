@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The $0 Mechanical Pencil — Workshop 42</title>
+  <meta name="description" content="Cloning a $30 NicPro mechanical pencil with nothing but a 3D printer and a stick of lead.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../assets/images/Logo.png" alt="Workshop 42">
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#blog">Blog</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Post -->
+  <article class="post">
+    <div class="container">
+      <div class="post-header">
+        <a href="../index.html#blog" class="post-back">&larr; Back to Blog</a>
+        <h1 class="post-title">The $0 Mechanical Pencil</h1>
+        <p class="post-meta">
+          <span>February 2026</span>
+          <span class="post-status post-status--in-progress">In Progress</span>
+        </p>
+      </div>
+
+      <!-- Quick Info -->
+      <div class="post-info">
+        <div class="post-info-grid">
+          <div class="post-info-item">
+            <span class="post-info-label">Category</span>
+            <span class="post-info-value">Practical &amp; Fun</span>
+          </div>
+          <div class="post-info-item">
+            <span class="post-info-label">Printer</span>
+            <span class="post-info-value">Bambu Lab A1 Mini</span>
+          </div>
+          <div class="post-info-item">
+            <span class="post-info-label">Hardware</span>
+            <span class="post-info-value">None &mdash; print and 2.8mm HB lead only</span>
+          </div>
+          <div class="post-info-item">
+            <span class="post-info-label">Inspired By</span>
+            <span class="post-info-value">NicPro mechanical pencils ($20&ndash;$40)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-content">
+        <h2>What It Is</h2>
+        <p>NicPro makes nice mechanical pencils that use round 2.8mm HB lead. They run $20 to $40 depending on the model. I wanted to see if I could make a printable version that works just as well &mdash; no springs, no screws, no hardware of any kind. Just the printed parts and a stick of lead.</p>
+
+        <img src="../assets/images/CarpenterPencil_1.jpg" alt="Mechanical pencil - side view on cutting mat">
+
+        <p>The body has a textured grip section and a tapered front end. Twist the barrel to advance the lead. The whole mechanism is print-in-place &mdash; nothing to assemble beyond dropping the lead in.</p>
+
+        <h2>Status Updates</h2>
+        <div class="post-timeline">
+          <div class="timeline-entry">
+            <div class="timeline-date">Early February 2026</div>
+            <div class="timeline-text">
+              Started with the twist mechanism. The constraint of no hardware meant the threading and lead grip had to be built into the print geometry itself. Went through a few iterations on thread pitch and wall thickness.
+              <img src="../assets/images/CarpenterPencil_2.jpg" alt="Mechanical pencil - grip detail">
+            </div>
+          </div>
+          <div class="timeline-entry timeline-entry--current">
+            <div class="timeline-date">February 2026 — Current</div>
+            <div class="timeline-text">
+              Working prototype. The lead holds well and the twist advance works. Still want to tighten up the feel &mdash; there's a bit of play in the mechanism that I'd like to dial out.
+              <img src="../assets/images/CarpenterPencil_3.jpg" alt="Mechanical pencil - standing upright">
+            </div>
+          </div>
+        </div>
+
+        <h2>What's Next</h2>
+        <p>Refining the internal tolerances to get rid of the play in the twist mechanism. If I can get the feel as smooth as the NicPro originals, this was worth the effort. Goal is a pencil that costs nothing but filament and works just as well as one that costs $30.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        &copy; 2026 Workshop 42. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

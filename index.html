@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workshop 42 — Maker Space &amp; Portfolio</title>
+  <meta name="description" content="Workshop 42 is a maker space where ideas become real. 3D printing, electronics, woodworking, and more.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <a href="#" class="nav-logo">
+        <img src="assets/images/Logo.png" alt="Workshop 42">
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <img src="assets/images/Logo.png" alt="Workshop 42" class="hero-logo">
+      <p class="hero-tagline">A maker space where ideas become real. 3D printing, electronics, woodworking, and whatever else sounds fun.</p>
+      <div class="hero-buttons">
+        <a href="#blog" class="btn btn-primary">Read the Blog</a>
+        <a href="#projects" class="btn btn-outline">See My Work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider: dark to light -->
+  <div class="section-divider section-divider--dark-to-light"></div>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2 class="section-title">About Workshop 42</h2>
+      <p class="section-subtitle">Where curiosity meets a cutting mat.</p>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Workshop 42 is a real workshop and the online home for everything I build. I'm a lifelong tinkerer who loves turning ideas into tangible, easy-to-build projects.</p>
+          <p>Expect a mix of 3D-printable parts, laser-cut files, and simple DIY solutions &mdash; everything designed for everyday practicality and fun experimentation.</p>
+          <p>This site is where I document the process. Short updates, build photos, stuff that worked, stuff that didn't. Follow along or grab something useful.</p>
+        </div>
+        <div class="about-image">
+          <img src="assets/images/TheWorkshop.jpg" alt="The Workshop 42 workspace">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider: light to grey -->
+  <div class="section-divider section-divider--light-to-grey"></div>
+
+  <!-- Projects -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-subtitle">Things I've built and things I'm building.</p>
+      <!-- Design Challenges -->
+      <div class="project-category">
+        <h3 class="category-header">Design Challenges</h3>
+        <div class="projects-grid">
+
+          <a href="blog/piachi-g9.html" class="project-card">
+            <span class="project-badge">In Progress</span>
+            <div class="project-card-image">
+              <img src="assets/images/PiachiG9_5.jpg" alt="Piachi G9 Utility Knife Clone">
+            </div>
+            <div class="project-card-body">
+              <h3>Piachi G9 Clone</h3>
+              <p>A fully 3D printed utility knife with a gear-driven blade mechanism. Three positions: locked, blade swap, and quick deploy.</p>
+              <div class="project-tags">
+                <span class="project-tag">3D Printing</span>
+                <span class="project-tag">Mechanical</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="blog/sabervac.html" class="project-card">
+            <span class="project-badge">In Progress</span>
+            <div class="project-card-image">
+              <img src="assets/images/SaberVac_1.jpg" alt="SaberVac - Lightsaber Handheld Vacuum">
+            </div>
+            <div class="project-card-body">
+              <h3>SaberVac</h3>
+              <p>A compact handheld vacuum built from a Bambu Lab kit in a custom shell that turned into a lightsaber.</p>
+              <div class="project-tags">
+                <span class="project-tag">3D Printing</span>
+                <span class="project-tag">Electronics</span>
+              </div>
+            </div>
+          </a>
+
+          <div class="project-card project-card--coming-soon">
+            <div class="coming-soon-icon"></div>
+            <div class="coming-soon-title">Coming Soon</div>
+            <p class="coming-soon-text">Something new is on the bench. Stay tuned.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Recyclables -->
+      <div class="project-category">
+        <h3 class="category-header">Recyclables</h3>
+        <div class="projects-grid">
+
+          <a href="https://makerworld.com/en/models/1486805-thermafill-thermacell-cartridge-refill-adapter#profileId-1553538" target="_blank" rel="noopener" class="project-card">
+            <div class="project-card-image">
+              <img src="assets/images/Thermafill.png" alt="Thermafill - Thermacell Cartridge Refill Adapter">
+            </div>
+            <div class="project-card-body">
+              <h3>Thermafill</h3>
+              <p>A refillable cartridge adapter for Thermacell mosquito repellent. Saves money, cuts waste.</p>
+              <div class="project-tags">
+                <span class="project-tag">3D Printing</span>
+                <span class="project-tag">Sustainability</span>
+              </div>
+            </div>
+          </a>
+
+          <div class="project-card project-card--coming-soon">
+            <div class="coming-soon-icon"></div>
+            <div class="coming-soon-title">Vape Battery Bank</div>
+            <p class="coming-soon-text">Harvesting lithium cells from disposable vapes. Build details coming soon.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Practical & Fun -->
+      <div class="project-category">
+        <h3 class="category-header">Practical &amp; Fun</h3>
+        <div class="projects-grid">
+
+          <a href="blog/carpenter-pencil.html" class="project-card">
+            <span class="project-badge">In Progress</span>
+            <div class="project-card-image">
+              <img src="assets/images/CarpenterPencil_1.jpg" alt="3D Printed Mechanical Pencil">
+            </div>
+            <div class="project-card-body">
+              <h3>Mechanical Pencil</h3>
+              <p>A 3D printed NicPro-style mechanical pencil with a twist-advance mechanism. 2.8mm HB lead, no springs, no hardware &mdash; just print and lead.</p>
+              <div class="project-tags">
+                <span class="project-tag">3D Printing</span>
+                <span class="project-tag">Design</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://makerworld.com/en/models/2241447-apex-monitor-riser#profileId-2439880" target="_blank" rel="noopener" class="project-card">
+            <div class="project-card-image">
+              <img src="assets/images/Apex.jpg" alt="Apex Monitor Riser">
+            </div>
+            <div class="project-card-body">
+              <h3>Apex Monitor Riser</h3>
+              <p>Simple, strong, stylish. 3D printed monitor riser legs that pair with a wood shelf for a clean desk setup.</p>
+              <div class="project-tags">
+                <span class="project-tag">3D Printing</span>
+                <span class="project-tag">Desk Setup</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://makerworld.com/en/models/1758264-the-voyager-a-floating-canoe-model-quick-print#profileId-1870079" target="_blank" rel="noopener" class="project-card">
+            <div class="project-card-image">
+              <img src="assets/images/Voyager.jpg" alt="The Voyager - Floating Canoe Model">
+            </div>
+            <div class="project-card-body">
+              <h3>The Voyager</h3>
+              <p>A floating canoe model designed as a quick print. Dual-color design that actually floats.</p>
+              <div class="project-tags">
+                <span class="project-tag">3D Printing</span>
+                <span class="project-tag">Fun</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider: grey to light -->
+  <div class="section-divider section-divider--grey-to-light"></div>
+
+  <!-- Blog -->
+  <section class="blog" id="blog">
+    <div class="container">
+      <h2 class="section-title">Blog</h2>
+      <p class="section-subtitle">Notes from the workshop.</p>
+      <div class="blog-grid">
+
+        <a href="blog/piachi-g9.html" class="blog-card">
+          <div class="blog-card-body">
+            <div class="blog-card-date">February 2026</div>
+            <h3>Building a Utility Knife from Scratch</h3>
+            <p>Designing a gear-driven 3D printed clone of the Piachi G9 with three blade positions.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a href="blog/sabervac.html" class="blog-card">
+          <div class="blog-card-body">
+            <div class="blog-card-date">February 2026</div>
+            <h3>The SaberVac Build</h3>
+            <p>Shrinking a Bambu Lab vacuum kit into a compact shell that accidentally became a lightsaber.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+        <a href="blog/carpenter-pencil.html" class="blog-card">
+          <div class="blog-card-body">
+            <div class="blog-card-date">February 2026</div>
+            <h3>The $0 Mechanical Pencil</h3>
+            <p>Cloning a $30 NicPro pencil with nothing but a 3D printer and a stick of lead.</p>
+            <span class="blog-card-link">Read more &rarr;</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider: light to dark -->
+  <div class="section-divider section-divider--light-to-dark"></div>
+
+  <!-- Contact / Footer -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <img src="assets/images/Logo.png" alt="Workshop 42">
+          </a>
+          <p>A maker space and personal portfolio. Turning ideas into tangible projects, one build at a time.</p>
+        </div>
+        <div>
+          <h4>Navigate</h4>
+          <div class="footer-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#blog">Blog</a>
+          </div>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <div class="social-links">
+            <a href="https://makerworld.com/en/@user_2931215427" target="_blank" rel="noopener">Makerworld</a>
+            <a href="https://github.com/JoshBoyer" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Workshop 42. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

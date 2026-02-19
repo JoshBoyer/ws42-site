@@ -43,6 +43,15 @@
     });
   }
 
-  window.addEventListener('scroll', highlightNav, { passive: true });
+  var ticking = false;
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      requestAnimationFrame(function () {
+        highlightNav();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
   highlightNav();
 })();

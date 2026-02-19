@@ -782,13 +782,18 @@ ul {
   font-size: 0.85rem;
 }
 
-/* --- Speed Line Accent --- */
-.speed-line {
-  display: block;
-  width: 120px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--red), transparent);
-  margin: 16px 0;
+/* --- Reduced Motion --- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }
 
 /* --- Mobile Responsive --- */

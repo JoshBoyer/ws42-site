@@ -297,10 +297,42 @@ ul {
   margin: 0 auto 40px;
 }
 
+.hero-motto {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--white);
+  margin: 0 auto 20px;
+  position: relative;
+  display: inline-block;
+  padding: 0 24px;
+}
+
+.hero-motto::before,
+.hero-motto::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 3px;
+  background: var(--red);
+  transform: skewX(-20deg);
+}
+
+.hero-motto::before {
+  right: 100%;
+}
+
+.hero-motto::after {
+  left: 100%;
+}
+
 .hero-tagline {
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   color: var(--chrome-light);
-  max-width: 560px;
+  max-width: 540px;
   margin: 0 auto 48px;
   line-height: 1.7;
   font-style: italic;
@@ -311,6 +343,65 @@ ul {
   gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+/* --- Stats Stripe --- */
+.stats-stripe {
+  background: var(--red);
+  padding: 28px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.stats-stripe::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -10%;
+  width: 120%;
+  height: 200%;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 20px,
+    rgba(0, 0, 0, 0.05) 20px,
+    rgba(0, 0, 0, 0.05) 40px
+  );
+  pointer-events: none;
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+  position: relative;
+  z-index: 1;
+}
+
+.stat {
+  text-align: center;
+  color: var(--white);
+}
+
+.stat-value {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.85;
 }
 
 /* --- Angled Section Divider --- */
@@ -494,6 +585,11 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.project-card:hover .project-card-image img {
+  transform: scale(1.05);
 }
 
 /* Diagonal overlay on project images */
@@ -852,6 +948,27 @@ ul {
 
   .hero-tagline {
     font-size: 1.05rem;
+  }
+
+  /* Stats stripe mobile */
+  .stats-grid {
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+
+  /* Hero motto mobile */
+  .hero-motto {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+
+  .hero-motto::before,
+  .hero-motto::after {
+    display: none;
   }
 
   /* Dividers smaller on mobile */

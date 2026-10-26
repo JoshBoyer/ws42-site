@@ -1,0 +1,13 @@
+{
+  "aboutParagraphs": [
+    "Workshop 42 is a real workshop and the online home for everything I build. I'm a lifelong tinkerer who loves turning ideas into tangible, easy-to-build projects.",
+    "Expect a mix of 3D-printable parts, laser-cut files, and simple DIY solutions &mdash; everything designed for everyday practicality and fun experimentation.",
+    "This site is where I document the process. Short updates, build photos, stuff that worked, stuff that didn't. Follow along or grab something useful."
+  ],
+  "articleBodySHA256": {
+    "blog/carpenter-pencil.html": "7a090af33f63032e92a5d963a6182ddca394c9b167ffb1ab96e47a8dcd08f825",
+    "blog/forage.html": "1983eea606893ade9231108750f49273ad7b19cb9f656e4b881c7fd16c0e247b",
+    "blog/piachi-g9.html": "624a17b4d009d760c633c7cb393c63385640c9d6f3ff6eb14edddae9f75eac31",
+    "blog/sabervac.html": "c4f5ed32b44011f653a92ab4d7f6ce1d115db45c2a83272365799bd5f373cba5"
+  }
+}

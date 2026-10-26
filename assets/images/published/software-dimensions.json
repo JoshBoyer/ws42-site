@@ -1,0 +1,44 @@
+[
+  {
+    "Published": "assets/images/published/daynas-pet-sitting-homepage.jpg",
+    "Width": 1425,
+    "Height": 891,
+    "Bytes": 150684,
+    "PublishedSHA256": "4FF1F913C1F34399F761B23EE6AF34531681822DF10321B3E9436090F0DFEB90"
+  },
+  {
+    "Published": "assets/images/published/lowkey-parakeet.png",
+    "Width": 256,
+    "Height": 256,
+    "Bytes": 4385,
+    "PublishedSHA256": "6A5D7ECCE60172277D44264E424BEA598A97142EA331DF41D6F19953BA1D9E91"
+  },
+  {
+    "Published": "assets/images/published/nexus-mark.png",
+    "Width": 256,
+    "Height": 253,
+    "Bytes": 78712,
+    "PublishedSHA256": "D982B66DD1D4C38BD0E0597219F27F28AA60669024A5DD146BF1BFBEDB536705"
+  },
+  {
+    "Published": "assets/images/published/daynas-logo.png",
+    "Width": 500,
+    "Height": 230,
+    "Bytes": 37413,
+    "PublishedSHA256": "83F8A30CF5F3962F182AC039095E448D6682D74466F908DFA1D88B2EF284103D"
+  },
+  {
+    "Published": "assets/images/published/forage-marketing-homepage.jpg",
+    "Width": 1297,
+    "Height": 931,
+    "Bytes": 59599,
+    "PublishedSHA256": "99632359C2E0E118F1114575EDB08F787A541D3E92528E6B46031BF3E91488EB"
+  },
+  {
+    "Published": "assets/images/published/forage-logo.svg",
+    "Width": 32,
+    "Height": 44,
+    "Bytes": 476,
+    "PublishedSHA256": "DE9164172185C6D8F44BDFA195C4FF5F76D06EF16EEBDCEB3B74A9D834662056"
+  }
+]

@@ -2,38 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+<script src="../js/theme.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Building a Utility Knife from Scratch — Workshop 42</title>
   <meta name="description" content="Designing a gear-driven 3D printed clone of the Piachi G9 utility knife with three blade positions.">
-  <link rel="stylesheet" href="../css/style.css">
+  <meta name="theme-color" content="#191b1f">
+  <link rel="apple-touch-icon" href="../assets/images/published/Logo.png">
+  <meta property="og:title" content="Building a Utility Knife from Scratch — Workshop 42">
+  <meta property="og:description" content="Designing a gear-driven 3D printed clone of the Piachi G9 utility knife with three blade positions.">
+  <meta property="og:image" content="https://ws42.ca/assets/images/published/PiachiG9_5.jpg">
+  <meta property="og:url" content="https://ws42.ca/blog/piachi-g9.html">
+  <meta property="og:type" content="article">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;700;800&amp;display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-42-32.png?v=20261025-42-2">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-42-16.png?v=20261025-42-2">
+<link rel="shortcut icon" type="image/x-icon" href="../assets/icons/favicon-42.ico?v=20261025-42-2">
+<link rel="icon" type="image/svg+xml" sizes="any" href="../assets/icons/favicon-42.svg?v=20261025-42-2">
+<script src="../js/motion.js"></script>
+<link rel="stylesheet" href="../css/workshop.css">
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="../css/article.css">
+<link rel="stylesheet" href="../css/theme.css">
+<link rel="stylesheet" href="../css/motion.css">
 </head>
-<body>
+<body class="article-page">
+  <a class="skip-link" href="#article">Skip to article</a>
 
   <!-- Navigation -->
-  <nav class="nav">
-    <div class="container">
-      <a href="../index.html" class="nav-logo">
-        <img src="../assets/images/Logo.png" alt="Workshop 42">
-      </a>
-      <ul class="nav-links">
-        <li><a href="../index.html#about">About</a></li>
+  <header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html" aria-label="Workshop 42 home"><span class="wordmark">WORKSHOP<span>42</span></span></a>
+    <nav aria-label="Main navigation">
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu">Menu <span aria-hidden="true">+</span></button>
+      <ul id="main-menu" class="main-menu">
         <li><a href="../index.html#projects">Projects</a></li>
-        <li><a href="../index.html#blog">Blog</a></li>
-        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="../index.html#blog" aria-current="page">Build notes</a></li>
+        <li><a href="../workshop.html">The workshop</a></li>
+        <li><a href="../about.html">About</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
+    </nav>
+    <button class="theme-toggle" type="button" hidden aria-label="Theme: System. Switch to light mode" title="Theme: System. Switch to light mode"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 4v16M12 4a8 8 0 0 1 0 16Z" fill="currentColor" stroke="none"></path></svg><span class="theme-label">System</span></button>
+    <span class="site-id">WS42.CA <i aria-hidden="true"></i></span>
+  </div>
+</header>
 
   <!-- Post -->
-  <article class="post">
+  <main id="main">
+<article class="post" id="article">
     <div class="container">
       <div class="post-header">
-        <a href="../index.html#blog" class="post-back">&larr; Back to Blog</a>
+        <a href="../index.html#blog" class="post-back">&larr; Back to build notes</a>
         <h1 class="post-title">Building a Utility Knife from Scratch</h1>
         <p class="post-meta">
           <span>February 2026</span>
@@ -67,7 +87,7 @@
         <h2>What It Is</h2>
         <p>A fully 3D printed clone of the Piachi G9 utility knife. The form factor caught my eye as a pure engineering challenge &mdash; compact, satisfying mechanism, interesting geometry. I wanted to see if I could build the whole thing from a printer and a handful of screws.</p>
 
-        <img src="../assets/images/PiachiG9_5.jpg" alt="Piachi G9 clone - closed position">
+        <img src="../assets/images/published/PiachiG9_5.jpg" alt="Piachi G9 clone - closed position" width="1600" height="1205">
 
         <p>The core is a gear system that pivots on an M3 screw. The gear has three positions with divots for alignment at each stop, and it drives a second M3 screw to control what the blade cover can do.</p>
 
@@ -79,26 +99,32 @@
 
         <p>Under the hood there's a channel system that physically blocks the cover from opening when the gear is in the back position. Magnets handle blade alignment and help keep everything seated when closed.</p>
 
-        <img src="../assets/images/PiachiG9_2.jpg" alt="Piachi G9 clone - blade mechanism detail">
+        <img src="../assets/images/published/PiachiG9_2.jpg" alt="Piachi G9 clone - blade mechanism detail" loading="lazy" decoding="async" width="1600" height="1205">
 
         <h2>Status Updates</h2>
         <div class="post-timeline">
           <div class="timeline-entry">
             <div class="timeline-date">Early February 2026</div>
-            <div class="timeline-text">Started CAD work on the body and gear mechanism. Worked through several iterations on the pivot geometry and divot spacing.</div>
+            <div class="timeline-text">Started CAD work on the body and gear mechanism. Worked through several iterations on the pivot geometry and divot spacing.<!-- cad-study:start -->
+              <figure class="cad-study">
+                <img src="../assets/images/published/G2V1_CAD.png" alt="CAD view of the Piachi G9-inspired utility knife body, diagonal grip ribs, internal stop slot and round gear pivot" loading="lazy" decoding="async" width="1244" height="657">
+                <figcaption class="cad-caption">CAD study of the utility knife body, diagonal grip ribs, internal stop slot and round gear pivot.</figcaption>
+              </figure>
+            <!-- cad-study:end -->
+</div>
           </div>
           <div class="timeline-entry">
             <div class="timeline-date">Mid February 2026</div>
             <div class="timeline-text">
               First prints of the internal components on the A1 Mini. Getting the tolerances right for the gear to feel solid took a few rounds.
-              <img src="../assets/images/PiachiG9_Printing.jpg" alt="Internal parts printing on Bambu Lab A1 Mini">
+              <img src="../assets/images/published/PiachiG9_Printing.jpg" alt="Internal parts printing on Bambu Lab A1 Mini" loading="lazy" decoding="async" width="1205" height="1600">
             </div>
           </div>
           <div class="timeline-entry timeline-entry--current">
             <div class="timeline-date">February 2026 — Current</div>
             <div class="timeline-text">
               Working prototype assembled. Blade extends, locks, and retracts across all three gear positions. Magnets are seated and alignment is good. Still refining the fit and feel before release.
-              <img src="../assets/images/PiachiG9_4.jpg" alt="Piachi G9 clone - blade extended">
+              <img src="../assets/images/published/PiachiG9_4.jpg" alt="Piachi G9 clone - blade extended" loading="lazy" decoding="async" width="1205" height="1600">
             </div>
           </div>
         </div>
@@ -106,20 +132,27 @@
         <h2>What's Next</h2>
         <p>Tightening up the tolerances on the gear action and doing a final round of test prints. Once I'm happy with the feel, this one goes on Makerworld.</p>
 
-        <img src="../assets/images/PiachiG9_3.jpg" alt="Piachi G9 clone - back view">
+        <img src="../assets/images/published/PiachiG9_3.jpg" alt="Piachi G9 clone - back view" loading="lazy" decoding="async" width="1205" height="1600">
       </div>
     </div>
   </article>
+</main>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-bottom">
-        &copy; 2026 Workshop 42. All rights reserved.
-      </div>
-    </div>
-  </footer>
-
-  <script src="../js/main.js"></script>
+  <footer class="site-footer">
+  <div class="wrap footer-inner">
+    <a class="brand" href="../index.html" aria-label="Workshop 42 home"><span class="wordmark">WORKSHOP<span>42</span></span></a>
+    <a href="../index.html#projects">Projects</a>
+    <a href="../index.html#blog">Build notes</a>
+    <a href="../workshop.html">The workshop</a>
+    <a href="../about.html">About</a>
+    <a href="../index.html#contact">Contact</a>
+    <a href="https://makerworld.com/en/@user_2931215427">Makerworld &#8599;</a>
+    <a href="https://github.com/JoshBoyer">GitHub &#8599;</a>
+    <button class="motion-toggle" type="button" hidden aria-label="Reduce motion" aria-pressed="false"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h11M3 12h7M3 17h11M15 8l5 4-5 4"></path></svg><span>Motion: Full</span></button>
+    <span>&copy; 2026 Workshop 42</span>
+  </div>
+</footer>
+<script src="../js/header.js"></script>
 </body>
 </html>

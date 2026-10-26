@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 36">
+  <defs>
+    <linearGradient id="chr" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C0C0C0"/>
+      <stop offset="40%" stop-color="#9A9A9A"/>
+      <stop offset="100%" stop-color="#555555"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b391ff"/>
+      <stop offset="100%" stop-color="#8147ff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- W - hand-drawn with sharp top-left spike -->
+  <path d="M2 4 L0 6 L6.5 28 L12 12 L17.5 28 L24 6 L20.5 6 L17.5 20 L12 6 L6.5 20 L3.5 6 Z" fill="url(#chr)"/>
+
+  <!-- S - geometric block S -->
+  <path d="M28 6 L38 6 L38 9.5 L31 9.5 L31 15 L38 15 L38 28 L28 28 L28 24.5 L35 24.5 L35 18.5 L28 18.5 Z" fill="url(#chr)"/>
+
+  <!-- 4 - angular -->
+  <path d="M46 6 L43 20 L55 20 L55 6 L51.5 6 L51.5 16.5 L46.5 16.5 L49.5 6 Z M55 23 L55 28 L51.5 28 L51.5 23 Z" fill="url(#red)"/>
+
+  <!-- 2 - geometric -->
+  <path d="M60 6 L72 6 L72 16 L63.5 24.5 L72 24.5 L72 28 L60 28 L60 18 L68.5 9.5 L60 9.5 Z" fill="url(#red)"/>
+
+  <!-- Underscore swoosh -->
+  <path d="M1 31 L80 31 L82 30" stroke="url(#red)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+</svg>

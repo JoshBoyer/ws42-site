@@ -1,0 +1,11 @@
+{
+  "name": "workshop42-static-site",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/preview.mjs",
+    "check": "node --check js/header.js && node --check js/workshop.js && node --check js/theme.js && node --check js/motion.js && node --check js/hero-video.js && node scripts/check-theme.mjs && node scripts/check-motion.mjs && node scripts/check-hero-video.mjs && node scripts/check-video-range.mjs && node scripts/check.mjs && node scripts/check-public.mjs",
+    "check:http": "node scripts/check-http.mjs",
+    "sync:shell": "node scripts/sync-shell.mjs",
+    "build": "node scripts/sync-shell.mjs && node scripts/build.mjs"
+  }
+}

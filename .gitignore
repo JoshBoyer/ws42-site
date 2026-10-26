@@ -1,0 +1,30 @@
+# Secrets — never commit; this repo publishes to GitHub Pages
+.env
+.env.*
+!.env.example
+
+# Editor/tooling backups
+*.bak
+*.[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9].bak
+
+# Local screenshot / test output
+.playwright-mcp/
+*-desktop.png
+*-top.png
+mobile-*.png
+home-*.png
+
+# OS cruft
+Thumbs.db
+.DS_Store
+nul
+
+# Generated public artifact; excludes original photo sources
+.site/
+test-screenshots/
+
+# Private local review and preparation files
+references/
+HANDOFF.md
+ARGON_REVIEW.md
+publication-rollback*/

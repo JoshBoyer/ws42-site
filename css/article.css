@@ -1,0 +1,62 @@
+/* Build journals: the same graphite, paper, violet and industrial typography as the maker pages. */
+.article-page{background:#191b1f}
+.article-page .post>.container{width:min(1200px,calc(100% - 80px));margin-inline:auto}
+.post{padding:0 0 60px}
+.post-header{padding:54px 0 38px;border-bottom:1px solid #ffffff24}
+.post-back{display:inline-flex;align-items:center;min-height:44px;margin-bottom:22px;font:11px/1.6 var(--mono);color:#b391ff;text-decoration:underline;text-underline-offset:4px}
+.post-title{font:800 clamp(48px,5.5vw,78px)/.99 var(--heading);letter-spacing:-.025em;text-transform:uppercase;max-width:20ch;margin:0 0 24px;color:#f5f5f0}
+.post-meta{display:flex;align-items:center;flex-wrap:wrap;gap:20px;font:11px/1.6 var(--mono);color:#c2c5ca;max-width:none}
+.post-status{font:10px/1.4 var(--mono);color:#fff;background:#7032dc;padding:5px 8px;text-transform:uppercase}
+.post-info{padding:30px 0}
+.post-info-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.post-info-item{border-left:1px solid #b391ff66;padding-left:16px}
+.post-info-label{display:block;font:9px/1.6 var(--mono);text-transform:uppercase;color:#b9bdc2;letter-spacing:.05em;margin-bottom:8px}
+.post-info-value{font:12px/1.6 var(--body);color:#f5f5f0;display:block}
+.post-content{background:#efefeb;color:#191b1f;padding:52px 56px;border-top:3px solid #8147ff}
+.post-content>*{max-width:800px;margin-left:auto;margin-right:auto}
+.post-content h2{font:800 36px/1.03 var(--heading);letter-spacing:-.02em;text-transform:uppercase;margin-top:48px;margin-bottom:20px}
+.post-content h2:first-child{margin-top:0}
+.post-content h3{font:700 28px/1.1 var(--heading);margin-top:32px;margin-bottom:16px}
+.post-content p,.post-content li,.timeline-text{font:400 16px/1.75 var(--body)}
+.post-content p{max-width:800px;margin-top:0;margin-bottom:20px}
+.post-content ul,.post-content ol{padding-left:24px;margin-top:0;margin-bottom:26px}
+.post-content li{padding-left:3px;margin-bottom:10px}
+.post-content strong{font-weight:600}
+.post-content a:not(.btn){color:#6626cd;text-decoration:underline;text-underline-offset:4px}
+.post-content a:focus-visible{outline-color:#6626cd}
+.post-content img{display:block;width:100%;height:auto;max-height:740px;object-fit:contain;background:#dedfdb;border:1px solid #b9bdb9;margin-top:32px;margin-bottom:36px}
+.post-content .post-timeline{margin-top:28px;margin-bottom:36px}
+.timeline-entry{border-left:2px solid #b391ff;padding:0 0 25px 24px;margin:0}
+.timeline-entry:last-child{padding-bottom:0}
+.timeline-date{font:10px/1.6 var(--mono);text-transform:uppercase;color:#6626cd;margin-bottom:12px}
+.timeline-text{max-width:none}
+.timeline-text img{margin-top:24px;margin-bottom:8px}
+.cad-study{margin:24px 0 8px}
+.cad-study img{margin:0;background:#fff}
+.cad-caption{font:10px/1.6 var(--mono);color:#4e5359;margin-top:10px}
+.post-content .btn{display:inline-flex;align-items:center;gap:20px;min-height:46px;padding:12px 18px;font:11px/1.6 var(--mono);border:1px solid #8147ff;color:white;background:#8147ff;text-decoration:none;margin-top:6px;margin-bottom:8px}
+.post-content .btn:hover{background:#6e32eb}
+.post-content blockquote{border-left:3px solid #8147ff;padding:10px 22px;margin-top:26px;margin-bottom:26px}
+.post-content code{font:13px var(--mono);background:#dddeda;padding:2px 5px}
+.article-page .site-footer{margin-top:0}
+@media(max-width:1050px){.article-page .post>.container{width:calc(100% - 48px)}.post-content{padding:42px 36px}.post-info-grid{gap:20px}}
+@media(max-width:700px){
+  .article-page .post>.container{width:calc(100% - 40px)}
+  .post{padding-bottom:34px}
+  .post-header{padding-top:24px;padding-bottom:28px}
+  .post-back{margin-bottom:18px;font-size:10px}
+  .post-title{font-size:clamp(42px,11.5vw,62px);line-height:1.02;overflow-wrap:break-word;margin-bottom:22px}
+  .post-meta{gap:12px;font-size:10px}
+  .post-info{padding:25px 0}
+  .post-info-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 16px}
+  .post-info-item{padding-left:12px}
+  .post-info-value{font-size:11px}
+  .post-info-label{font-size:8px}
+  .post-content{padding:30px 20px}
+  .post-content h2{font-size:30px;margin-top:36px;margin-bottom:18px}
+  .post-content h3{font-size:25px}
+  .post-content p,.post-content li,.timeline-text{font-size:15px;line-height:1.75}
+  .post-content img{margin-top:26px;margin-bottom:28px;max-height:580px}
+  .timeline-entry{padding-left:16px;padding-bottom:23px}
+  .timeline-date{font-size:9px}
+}

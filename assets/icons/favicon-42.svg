@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <title>42</title>
+  <rect width="32" height="32" fill="#8147ff"/>
+  <g transform="translate(16 16) scale(.91) rotate(-8) translate(-57.5 -17)">
+    <path d="M46 6 L43 20 L51.5 20 L51.5 28 L55 28 L55 6 L51.5 6 L51.5 16.5 L46.5 16.5 L49.5 6 Z" fill="#f5f5f0" stroke="#f5f5f0" stroke-width=".2" stroke-linejoin="round"/>
+    <path d="M60 6 L72 6 L72 16 L63.5 24.5 L72 24.5 L72 28 L60 28 L60 18 L68.5 9.5 L60 9.5 Z" fill="#f5f5f0" stroke="#f5f5f0" stroke-width=".2" stroke-linejoin="round"/>
+  </g>
+</svg>

@@ -1,0 +1,38 @@
+/* One header across Home, The workshop and every article. No body-style dependencies. */
+.site-header,.site-header *,.site-header *:before,.site-header *:after{box-sizing:border-box}
+.site-header{height:82px;position:relative;z-index:20;background:#191b1ff5;border-bottom:1px solid #ffffff24;color:#f5f5f0;font-family:'IBM Plex Sans','Segoe UI',sans-serif;font-size:16px;line-height:1.55}
+.site-header .header-inner{width:min(1200px,calc(100% - 80px));height:100%;margin-inline:auto;display:flex;align-items:center;gap:54px}
+.site-header a{color:inherit;text-decoration:none}
+.site-header .brand{display:inline-flex;align-items:center;flex-shrink:0}
+.site-header .wordmark{font-family:'Barlow Condensed','Arial Narrow',Impact,sans-serif;font-size:35px;font-weight:800;letter-spacing:-1px;line-height:1;color:#f5f5f0}
+.site-header .wordmark>span{display:inline-block;background:#8147ff;color:#191b1f;padding:1px 3px 2px;margin-left:3px;transform:skewY(-4deg)}
+.site-header .main-menu{list-style:none;margin:0;padding:0;display:flex;gap:30px;align-items:center}
+.site-header .main-menu li{margin:0;padding:0;list-style:none}
+.site-header .main-menu a{display:block;font-family:'IBM Plex Sans','Segoe UI',sans-serif;font-size:13px;font-weight:400;line-height:1.55;letter-spacing:normal;text-transform:none;padding:25px 0;position:relative}
+.site-header .main-menu a:hover,.site-header .main-menu a[aria-current=page]{color:#b391ff}
+.site-header .main-menu a[aria-current=page]:after{content:'';position:absolute;height:2px;background:#8147ff;bottom:16px;left:0;right:0}
+.site-header .menu-toggle{display:none}
+.site-header .site-id{margin-left:auto;font:10px 'JetBrains Mono',Consolas,monospace;white-space:nowrap}
+.site-header .site-id i{display:inline-block;background:#8bc7cd;height:2px;width:18px;vertical-align:middle;margin-left:8px}
+.site-header a:focus-visible,.site-header button:focus-visible{outline:3px solid #8bc7cd;outline-offset:5px}
+/* Small ink-rule / halftone accents; typography, brand and menu geometry stay shared. */
+.site-header:before{content:'';position:absolute;left:max(20px,calc((100% - 1200px)/2));bottom:-1px;width:76px;height:3px;background:#8147ff;clip-path:polygon(0 15%,100% 0,96% 75%,3% 100%);pointer-events:none}
+.site-header:after{content:'';position:absolute;right:0;top:0;bottom:0;width:180px;background-image:radial-gradient(#f5f5f024 .7px,transparent .9px);background-size:5px 5px;mask-image:linear-gradient(90deg,transparent,#0008);pointer-events:none;z-index:-1}
+@media(max-width:1050px){.site-header .header-inner{width:calc(100% - 48px);gap:30px}.site-header .main-menu{gap:22px}.site-header .site-id{display:none}}
+@media(max-width:700px){
+  .site-header{height:72px}
+  .site-header .header-inner{width:calc(100% - 40px);justify-content:space-between}
+  .site-header .wordmark{font-size:31px}
+  .site-header .menu-toggle{display:flex;align-items:center;gap:18px;border:1px solid #777782;background:none;color:white;padding:8px 12px;min-height:44px;font:11px 'JetBrains Mono',Consolas,monospace;cursor:pointer}
+  .site-header .menu-toggle span{font-size:18px}
+  .site-header .main-menu{display:block}
+  .js .site-header .main-menu{display:none;position:absolute;left:0;right:0;top:71px;background:#191b1f;border-bottom:1px solid #777782;padding:12px 20px;box-shadow:0 15px 20px #0006}
+  .js .site-header .main-menu.open{display:block}
+  .site-header .main-menu a{padding:14px 8px;font-size:15px;min-height:44px}
+  .site-header .main-menu a[aria-current=page]:after{bottom:8px;width:80px;left:8px}
+  html:not(.js) .site-header{height:auto}
+  html:not(.js) .site-header .header-inner{align-items:flex-start;flex-wrap:wrap;padding-block:18px}
+  html:not(.js) .site-header .menu-toggle{display:none}
+  html:not(.js) .site-header .header-inner nav{width:100%}
+  html:not(.js) .site-header .main-menu{display:flex;flex-wrap:wrap;gap:8px 20px}
+}

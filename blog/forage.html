@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<script src="../js/theme.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building Forage — Workshop 42</title>
+  <meta name="description" content="Forage helps a household stay ahead of its home — its systems and upkeep, the week's meals, and the people, all in sync. Built for Canadian homes, hosted in Canada. What it is and how it's built.">
+  <meta name="theme-color" content="#191b1f">
+  <link rel="apple-touch-icon" href="../assets/images/published/Logo.png">
+  <meta property="og:title" content="Building Forage — Workshop 42">
+  <meta property="og:description" content="Forage helps a household stay ahead of its home — its systems and upkeep, the week's meals, and the people, all in sync. Built for Canadian homes, hosted in Canada.">
+  <meta property="og:image" content="https://ws42.ca/assets/images/published/forage-dashboard.jpg">
+  <meta property="og:url" content="https://ws42.ca/blog/forage.html">
+  <meta property="og:type" content="article">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;700;800&amp;display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-42-32.png?v=20261025-42-2">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-42-16.png?v=20261025-42-2">
+<link rel="shortcut icon" type="image/x-icon" href="../assets/icons/favicon-42.ico?v=20261025-42-2">
+<link rel="icon" type="image/svg+xml" sizes="any" href="../assets/icons/favicon-42.svg?v=20261025-42-2">
+<script src="../js/motion.js"></script>
+<link rel="stylesheet" href="../css/workshop.css">
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="../css/article.css">
+<link rel="stylesheet" href="../css/theme.css">
+<link rel="stylesheet" href="../css/motion.css">
+</head>
+<body class="article-page">
+  <a class="skip-link" href="#article">Skip to article</a>
+
+  <!-- Navigation -->
+  <header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html" aria-label="Workshop 42 home"><span class="wordmark">WORKSHOP<span>42</span></span></a>
+    <nav aria-label="Main navigation">
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu">Menu <span aria-hidden="true">+</span></button>
+      <ul id="main-menu" class="main-menu">
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#blog" aria-current="page">Build notes</a></li>
+        <li><a href="../workshop.html">The workshop</a></li>
+        <li><a href="../about.html">About</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" type="button" hidden aria-label="Theme: System. Switch to light mode" title="Theme: System. Switch to light mode"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="8"></circle><path d="M12 4v16M12 4a8 8 0 0 1 0 16Z" fill="currentColor" stroke="none"></path></svg><span class="theme-label">System</span></button>
+    <span class="site-id">WS42.CA <i aria-hidden="true"></i></span>
+  </div>
+</header>
+
+  <!-- Post -->
+  <main id="main">
+<article class="post" id="article">
+    <div class="container">
+      <div class="post-header">
+        <a href="../index.html#blog" class="post-back">&larr; Back to build notes</a>
+        <h1 class="post-title">Building Forage</h1>
+        <p class="post-meta">
+          <span>Updated July 2026</span>
+          <span class="post-status post-status--in-progress">Beta</span>
+        </p>
+      </div>
+
+      <!-- Quick Info -->
+      <div class="post-info">
+        <div class="post-info-grid">
+          <div class="post-info-item">
+            <span class="post-info-label">Type</span>
+            <span class="post-info-value">Home management platform for households</span>
+          </div>
+          <div class="post-info-item">
+            <span class="post-info-label">Stack</span>
+            <span class="post-info-value">React / TypeScript &middot; Fastify &middot; PostgreSQL</span>
+          </div>
+          <div class="post-info-item">
+            <span class="post-info-label">Hosting</span>
+            <span class="post-info-value">Self-hosted, data kept in Canada</span>
+          </div>
+          <div class="post-info-item">
+            <span class="post-info-label">Live site</span>
+            <span class="post-info-value"><a href="https://goforage.ca" target="_blank" rel="noopener">goforage.ca</a></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-content"><!-- project-media:start --><figure class="project-screen"><img src="../assets/images/published/forage-marketing-homepage.jpg" alt="Actual Forage marketing homepage introducing household management and home upkeep" width="1297" height="931" loading="lazy" decoding="async"><figcaption><a href="https://goforage.ca/">Forage's public marketing website</a>, captured 25 October 2026.</figcaption></figure><!-- project-media:end -->
+
+        <h2>What It Is</h2>
+        <p>Forage helps a household stay ahead of its home. It learns your home's systems and upkeep, keeps everyone in sync, and plans the week &mdash; from the maintenance that's coming due to what's for dinner. It's built for Canadian homes and hosted in Canada. It started as a kitchen tool and grew into the whole house.</p>
+
+        <p><a href="https://goforage.ca" target="_blank" rel="noopener" class="btn btn-primary">Join the waitlist &rarr;</a></p>
+
+        <img src="../assets/images/published/forage-dashboard.jpg" alt="A Forage home view — the day's meal plan, The Board for the household, and an on-hand inventory" width="1200" height="844">
+
+        <h2>Why I Built It</h2>
+        <p>Every home runs on scattered knowledge: when the furnace filter was last changed, what's actually in the freezer, whose turn it is to do what. Forage started with the kitchen &mdash; the 4:30 dinner panic, the groceries you buy twice because you forgot you had them. The fix, planning forward from what you already have, turned out to apply to the whole house, not just the pantry.</p>
+
+        <h2>What's Inside</h2>
+        <p>Forage is organised around a home, not a database:</p>
+        <ul>
+          <li><strong>Home Profile &amp; Upkeep</strong> &mdash; your home's systems and the maintenance that keeps them running, so nothing sneaks up on you.</li>
+          <li><strong>The Kitchen</strong> &mdash; stock across fridge, freezer, pantry, and spice rack (added by barcode, receipt, voice, camera, or typing), meal plans built from what you actually have, and shopping lists that carry only the gap.</li>
+          <li><strong>The Board</strong> &mdash; the household's shared hub: notes, nudges, chore wars, and one-tap meal ratings. Those ratings are the preference engine &mdash; Forage learns your table over time instead of asking you to fill out a profile.</li>
+          <li><strong>Ask Anything</strong> &mdash; a conversational assistant that answers questions about your own home and kitchen, not the whole internet.</li>
+          <li><strong>Find the right help</strong> &mdash; local services and trades, coming soon.</li>
+        </ul>
+
+        <img src="../assets/images/published/forage-board.jpg" alt="The Board in Forage — a shared household space for notes, nudges, chore wars, and ratings" width="1200" height="844">
+
+        <h2>How It's Built</h2>
+        <p>Forage is a Fastify and PostgreSQL app with a React and TypeScript front end (TanStack Router and Query, Radix, Tailwind, Zustand). Every entity is household-scoped and syncs live across devices over WebSockets, with push notifications for the nudges that matter. Two models sit behind the assistant and the recipe author &mdash; Claude and Gemini.</p>
+        <p>The whole thing is self-hosted with data kept in Canada: no cloud vendor lock-in, no third-party trackers, PIPEDA-aligned. Private by design isn't a badge bolted on at the end &mdash; it's why the architecture looks the way it does.</p>
+
+        <h2>The AI Angle</h2>
+        <p>Because everything in Forage runs through a clean REST API, I built a companion <strong>Model Context Protocol (MCP) server</strong> on top of it. It lets AI agents like Claude manage your stock, plan meals, and review the shopping list through typed, validated tools &mdash; the same actions you'd take in the app, handed to an agent. It ships with prebuilt workflows like weekly meal prep, a pantry audit, and "use it up." That server is the <a href="../index.html#projects">Forage MCP</a> entry over in the Lab.</p>
+
+        <h2>Try It</h2>
+        <p>Forage is in beta at <a href="https://goforage.ca" target="_blank" rel="noopener">goforage.ca</a>, built for Canadian homes and hosted in Canada. Join the waitlist to get in.</p>
+      </div>
+    </div>
+  </article>
+</main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+  <div class="wrap footer-inner">
+    <a class="brand" href="../index.html" aria-label="Workshop 42 home"><span class="wordmark">WORKSHOP<span>42</span></span></a>
+    <a href="../index.html#projects">Projects</a>
+    <a href="../index.html#blog">Build notes</a>
+    <a href="../workshop.html">The workshop</a>
+    <a href="../about.html">About</a>
+    <a href="../index.html#contact">Contact</a>
+    <a href="https://makerworld.com/en/@user_2931215427">Makerworld &#8599;</a>
+    <a href="https://github.com/JoshBoyer">GitHub &#8599;</a>
+    <button class="motion-toggle" type="button" hidden aria-label="Reduce motion" aria-pressed="false"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h11M3 12h7M3 17h11M15 8l5 4-5 4"></path></svg><span>Motion: Full</span></button>
+    <span>&copy; 2026 Workshop 42</span>
+  </div>
+</footer>
+<script src="../js/header.js"></script>
+</body>
+</html>

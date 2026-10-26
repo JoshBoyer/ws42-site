@@ -1,0 +1,23 @@
+[
+  {
+    "Published": "assets/images/published/Workshop42_Illustrated.png",
+    "Width": 1445,
+    "Height": 1088,
+    "Bytes": 4441084,
+    "PublishedSHA256": "EF5090B5DC823D2EC834C0D198871F8D143EB2FE85C077578B9598C9D83EDDB9"
+  },
+  {
+    "Published": "assets/images/published/Workshop42_Illustrated-800.jpg",
+    "Width": 800,
+    "Height": 602,
+    "Bytes": 226796,
+    "PublishedSHA256": "F8F39385C63535AF7DEA840871E5F547ADAC01919B0334E41149AACB0344191D"
+  },
+  {
+    "Published": "assets/images/published/Workshop42_Illustrated-1440.jpg",
+    "Width": 1440,
+    "Height": 1084,
+    "Bytes": 616586,
+    "PublishedSHA256": "35380BD26DD160674A9FA01D41C43962AA41B4965A39655EB3BDF14BBF121913"
+  }
+]

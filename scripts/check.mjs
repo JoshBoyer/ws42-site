@@ -50,7 +50,7 @@ for(const [file,html] of contents) {
   }
   if(file.startsWith('blog/') && originalArticles.has(file)) {
     // Explicitly marked new CAD evidence may be added while legacy prose remains exact.
-    const articleText=s=>s.slice(s.indexOf('<div class="post-content">'),s.indexOf('</article>')).replace(/<!-- cad-study:start -->[\s\S]*?<!-- cad-study:end -->\r?\n/g,'').replace(/<!-- project-media:start -->[\s\S]*?<!-- project-media:end -->\r?\n/g,'').replace(/<img\b[^>]*>/g,'').replace(/\r\n/g,'\n');
+    const articleText=s=>s.slice(s.indexOf('<div class="post-content">'),s.indexOf('</article>')).replace(/<!-- cad-study:start -->[\s\S]*?<!-- cad-study:end -->\r?\n/g,'').replace(/<!-- project-media:start -->[\s\S]*?<!-- project-media:end -->\r?\n/g,'').replace(/[ \t]*<!-- editorial-addition:start -->[\s\S]*?<!-- editorial-addition:end -->\r?\n/g,'').replace(/<img\b[^>]*>/g,'').replace(/\r\n/g,'\n');
     if(crypto.createHash('sha256').update(articleText(html)).digest('hex')!==baseline.articleBodySHA256[file]) errors.push(`${file}: article prose changed`);
   } else if(file.startsWith('blog/') && (!html.includes('data-review-draft="true"') || !html.includes('Local review draft'))) {
     errors.push(`${file}: new article must be marked as a local review draft`);

@@ -16,9 +16,11 @@
     button.querySelector('path').setAttribute('d',ended||paused?'M6 4l10 6-10 6z':'M5 4h3v12H5zM12 4h3v12h-3z');
     hero.dataset.videoState=blocked()||failed?'poster':ended?'ended':paused?'paused':'playing';
   };
-  const play=()=>{
-    if(blocked()||document.hidden||!visible||failed||userPaused||video.ended)return;
-    video.play()?.catch(()=>{button.hidden=false;update();});
+  const play=(userGesture=false)=>{
+    if(blocked()||document.hidden||failed||userPaused||(!userGesture&&(!visible||video.ended)))return;
+    try{
+      video.play()?.catch(()=>{button.hidden=false;update();});
+    }catch{button.hidden=false;update();}
   };
   const sync=()=>{
     if(blocked()){
@@ -37,8 +39,8 @@
   video.addEventListener('error',()=>{if(!video.hasAttribute('src'))return;failed=true;video.pause();hero.classList.remove('video-ready');button.hidden=true;update();});
   button.addEventListener('click',()=>{
     if(blocked())return;
-    if(video.ended){video.currentTime=0;userPaused=false;play();}
-    else if(video.paused){userPaused=false;play();}
+    if(video.ended){video.currentTime=0;userPaused=false;play(true);}
+    else if(video.paused){userPaused=false;play(true);}
     else{userPaused=true;video.pause();}
     update();
   });

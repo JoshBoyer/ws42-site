@@ -3,8 +3,6 @@
 .hero h1 .motto-word{display:inline-block;color:inherit;position:relative}
 .hero h1 .motto-create{color:#b391ff;isolation:isolate}
 .motto-create:after{content:'';position:absolute;left:0;right:2%;height:4px;bottom:-8px;background:#8147ff;transform:rotate(-1deg);transform-origin:left;clip-path:polygon(0 20%,100% 0,97% 70%,2% 100%);pointer-events:none}
-html[data-motion=full] .motto-create:after{animation:ink-register 420ms 220ms var(--workshop-ease) both}
-@keyframes ink-register{from{transform:rotate(-1deg) scaleX(.02)}to{transform:rotate(-1deg) scaleX(1)}}
 .selected-photo{position:relative}
 .selected-photo:after{content:'';position:absolute;left:0;right:0;bottom:0;height:3px;background:#8147ff;transform:scaleX(0);transform-origin:left;transition:transform 200ms var(--workshop-ease);pointer-events:none}
 .selected-photo:focus-visible:after{transform:scaleX(1)}

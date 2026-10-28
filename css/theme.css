@@ -37,6 +37,36 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 /* Fixed photographic hero treatment: a neutral dark layer keeps text clear in both themes. */
 .hero{background:#191b1f;color:#f5f5f0}.hero .hero-description,.hero .hero-register{color:#e0e2e5}.hero .button-outline{color:#f5f5f0}.hero h1 span{color:#b391ff}
 .workshop-scene{background:transparent;border:0}
+/* Full-bleed workshop illustration, with fixed light copy in either theme. */
+.workshop-story{position:relative;isolation:isolate;display:flex;align-items:center;min-height:600px;padding:80px 0;overflow:hidden;background:#191b1f;color:#f5f5f0}
+.workshop-story-grid{display:block;position:relative;pointer-events:none}
+.workshop-scene{position:absolute;inset:0;margin:0;overflow:hidden}
+.workshop-scene>a{display:block;width:100%;height:100%}
+.workshop-scene img{width:100%;height:100%;aspect-ratio:auto;object-fit:cover;object-position:center 52%}
+.workshop-scene:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(15,16,19,.91) 0%,rgba(15,16,19,.78) 48%,rgba(15,16,19,.45) 100%)}
+.workshop-story-copy{position:relative;max-width:570px;pointer-events:auto;color:#f5f5f0}
+.workshop-story .workshop-story-copy>p:not(.eyebrow){color:#e0e2e5}
+.workshop-story .process-inline li{border-color:#ffffff80}
+.workshop-story .process-inline .mono{color:#d4c3ff}
+.workshop-story .button-outline{color:#fff;border-color:#c3a7ff}
+.workshop-story a:focus-visible{outline-color:#fff}
+@media(max-width:700px){
+  .workshop-story{min-height:620px;padding:64px 0}
+  .workshop-scene img{object-position:50% center}
+  .workshop-scene:after{background:rgba(15,16,19,.80)}
+}
+/* Thermafill image runs the height of the feature and blends into its surface. */
+.maker-win{position:relative;isolation:isolate;overflow:hidden}
+.maker-win-image{position:absolute;inset:0 auto 0 0;width:58%;max-height:none;border:0;background:transparent;overflow:hidden}
+.maker-win-image img{width:100%;height:100%;max-height:none;aspect-ratio:auto;object-fit:cover;object-position:center;mask-image:linear-gradient(to right,#000 0%,#000 50%,transparent 100%)}
+.maker-win-grid{position:relative;pointer-events:none}
+.maker-win-copy{grid-column:2;pointer-events:auto}
+@media(max-width:700px){
+  .maker-win{padding:320px 0 36px}
+  .maker-win-image{width:100%;max-height:none}
+  .maker-win-image img{height:100%;max-height:none;object-fit:cover;object-position:center}
+  .maker-win-copy{grid-column:1;background:var(--panel);padding:20px}
+}
 /* Tools are open marks, with no individual frame or background tile. */
 .tool-grid--brands .tool-logo{background:transparent;border:0;padding:0;justify-content:flex-start;width:190px;height:72px}
 .tool-grid--brands .tool-logo img{width:auto;max-width:170px;max-height:54px;object-position:left center;object-fit:contain;filter:none}
@@ -104,4 +134,118 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
 .selected-builds h3{font:700 34px/1.1 var(--heading);margin-bottom:12px}.selected-builds article p{color:var(--secondary);font-size:14px;line-height:1.7;max-width:50ch;margin-bottom:18px}.selected-links{display:flex;gap:12px 24px;flex-wrap:wrap}.selected-links a{display:inline-flex;align-items:center;min-height:44px}.selected-thermafill{margin-top:28px;padding-top:28px;border-top:1px solid var(--line)}.selected-thermafill h3{font-size:28px}.selected-builds .prototype-index{margin-top:40px}
 @media(max-width:1050px){.site-header .header-inner{gap:18px}.theme-label{display:none}.site-header .main-menu{gap:18px}.selected-layout{gap:28px}}
 @media(max-width:700px){.site-header .header-inner{gap:10px}.site-header nav{margin-left:auto;order:3}.theme-toggle{order:2;margin-left:auto}.site-header .wordmark{font-size:28px}.site-header .menu-toggle{padding:8px;gap:8px;font-size:10px}.selected-builds{padding:40px 0}.selected-heading{display:block;margin-bottom:28px}.selected-heading>p{margin-top:16px}.selected-layout{grid-template-columns:1fr;gap:36px}.selected-photo{margin-bottom:20px}.selected-builds h3{font-size:32px}.selected-lead .selected-photo{aspect-ratio:auto}.selected-side .selected-photo{aspect-ratio:auto}.selected-photo img{height:auto!important}.selected-builds .prototype-index{margin-top:32px}}
+
+/* Selected builds: existing project photography carries the copy. */
+.selected-lead,.selected-side>article:first-child{position:relative;isolation:isolate;display:flex;flex-direction:column;justify-content:flex-end;min-height:500px;padding:clamp(24px,3vw,40px);overflow:hidden;background:#191b1f;color:#f5f5f0;border:1px solid #a47aff66}
+.selected-side>article:first-child{min-height:390px}
+.selected-lead .selected-photo,.selected-side>article:first-child .selected-photo{position:absolute;inset:0;z-index:-1;margin:0;aspect-ratio:auto}
+.selected-lead .selected-photo img,.selected-side>article:first-child .selected-photo img{width:100%;height:100%;object-fit:cover;object-position:center}
+.selected-lead .selected-photo:before,.selected-side>article:first-child .selected-photo:before{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(0deg,rgba(17,19,23,.97) 0%,rgba(17,19,23,.88) 65%,rgba(17,19,23,.2) 100%)}
+.selected-lead h3,.selected-side>article:first-child h3{color:#f5f5f0}
+.selected-builds .selected-lead p,.selected-builds .selected-side>article:first-child p{color:#e0e2e5}
+.selected-lead .text-link,.selected-side>article:first-child .text-link{color:#d4c3ff}
+.selected-lead a:focus-visible,.selected-side>article:first-child a:focus-visible{outline-color:#fff}
+@media(max-width:700px){
+  .selected-lead,.selected-side>article:first-child{min-height:430px;padding:24px}
+  .selected-side>article:first-child{min-height:360px}
+  .selected-lead .selected-photo img,.selected-side>article:first-child .selected-photo img{height:100%!important;object-fit:cover}
+}
+/* Subtle project-specific layers keep the site's surfaces and text colors intact. */
+.software-card{background-color:var(--panel);background-repeat:no-repeat;background-position:center;background-size:cover;border-color:color-mix(in srgb,var(--accent) 35%,var(--line));overflow:hidden}
+.software-grid>.software-card:nth-child(1){background-image:linear-gradient(color-mix(in srgb,var(--panel) 94%,transparent),color-mix(in srgb,var(--panel) 94%,transparent)),url('../assets/images/published/nexus-mark.png')}
+.software-grid>.software-card:nth-child(2){background-image:linear-gradient(color-mix(in srgb,var(--panel) 94%,transparent),color-mix(in srgb,var(--panel) 94%,transparent)),url('../assets/images/published/lowkey-parakeet.png')}
+.software-grid>.software-card:nth-child(3){background-image:linear-gradient(color-mix(in srgb,var(--panel) 92%,transparent),color-mix(in srgb,var(--panel) 92%,transparent)),url('../assets/images/published/forage-dashboard.jpg')}
+.software-grid>.software-card:nth-child(4){background-image:linear-gradient(color-mix(in srgb,var(--panel) 92%,transparent),color-mix(in srgb,var(--panel) 92%,transparent)),url('../assets/images/published/daynas-pet-sitting-homepage.jpg')}
+.toolbox-preview{background-image:linear-gradient(color-mix(in srgb,var(--page) 94%,transparent),color-mix(in srgb,var(--page) 94%,transparent)),url('../assets/images/published/G2V1_CAD.png');background-position:center;background-size:cover}
+.journal{background-image:linear-gradient(color-mix(in srgb,var(--panel) 95%,transparent),color-mix(in srgb,var(--panel) 95%,transparent)),url('../assets/images/published/CarpenterPencil_1.jpg');background-position:center;background-size:cover}
+.maker-about{background-image:linear-gradient(color-mix(in srgb,var(--panel) 94%,transparent),color-mix(in srgb,var(--panel) 94%,transparent)),url('../assets/images/published/hero-workshop.jpg');background-position:center;background-size:cover}
+.archive{background-image:linear-gradient(color-mix(in srgb,var(--page) 96%,transparent),color-mix(in srgb,var(--page) 96%,transparent)),url('../assets/images/published/Workshop42_Illustrated-800.jpg');background-position:center;background-size:cover}
+/* Featured build wall: one lead image and two stacked image stories. */
+.selected-layout{grid-template-columns:2fr 1fr;gap:18px;align-items:stretch}
+.selected-side{display:grid;grid-template-rows:1fr 1fr;gap:18px;min-width:0}
+.selected-lead,.selected-side>article:first-child,.selected-thermafill{position:relative;isolation:isolate;display:flex;flex-direction:column;justify-content:flex-end;min-width:0;min-height:0;margin:0;padding:clamp(24px,2.8vw,40px);overflow:hidden;background:#191b1f;color:#f5f5f0;border:1px solid #a47aff88;border-radius:0}
+.selected-lead{min-height:560px}
+.selected-side>article:first-child,.selected-thermafill{min-height:270px}
+.selected-lead .selected-photo,.selected-side>article .selected-photo{position:absolute;inset:0;z-index:-1;display:block;margin:0;aspect-ratio:auto}
+.selected-lead .selected-photo,.selected-side>article .selected-photo,.selected-lead .selected-photo img,.selected-side>article .selected-photo img{border-radius:0}
+.selected-lead .selected-photo img,.selected-side>article .selected-photo img{width:100%;height:100%;object-fit:cover;object-position:center}
+.selected-thermafill .selected-photo img{object-position:center 45%}
+.selected-lead .selected-photo:before,.selected-side>article .selected-photo:before{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(0deg,rgba(17,19,23,.98) 0%,rgba(17,19,23,.9) 38%,rgba(17,19,23,.12) 100%)}
+.selected-builds .selected-lead h3,.selected-builds .selected-side article h3{color:#f5f5f0}
+.selected-builds .selected-lead h3{font-style:italic;text-transform:uppercase;font-size:clamp(42px,4.5vw,68px)}
+.selected-builds .selected-lead p,.selected-builds .selected-side article p{color:#e0e2e5}
+.selected-builds .selected-lead .text-link,.selected-builds .selected-side article .text-link{color:#e6dcff}
+.selected-lead .selected-links a{padding:10px 16px;border:1px solid #b391ff;border-radius:5px;text-decoration:none}
+.selected-lead .selected-links a:first-child{background:#8147ff;border-color:#8147ff;color:#fff}
+.selected-builds article a:focus-visible{outline:3px solid #fff;outline-offset:-4px}
+@media(max-width:700px){
+  .selected-layout{grid-template-columns:1fr;gap:16px}
+  .selected-lead{min-height:520px}
+  .selected-side>article:first-child,.selected-thermafill{min-height:360px}
+  .selected-lead,.selected-side>article:first-child,.selected-thermafill{padding:24px}
+  .selected-lead .selected-photo img,.selected-side>article .selected-photo img{height:100%!important;object-fit:cover}
+  .selected-lead .selected-photo:before,.selected-side>article .selected-photo:before{background:linear-gradient(0deg,rgba(17,19,23,.98) 0%,rgba(17,19,23,.9) 60%,rgba(17,19,23,.25) 100%)}
+}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+/* Curated, manually scrollable MakerWorld comments. */
+.makerworld-quotes {
+  padding-block: 24px;
+  border-top: 1px solid var(--line);
+}
+.makerworld-quotes__heading {
+  margin: 0 0 12px;
+  font: 700 11px/1.5 var(--mono);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+.makerworld-quotes__rail {
+  display: flex;
+  gap: 14px;
+  margin: 0;
+  padding: 0 0 12px;
+  list-style: none;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline proximity;
+  scrollbar-color: var(--accent) var(--panel);
+}
+.makerworld-quotes__item {
+  flex: 0 0 min(100%, 340px);
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: var(--panel);
+  scroll-snap-align: start;
+}
+.makerworld-quotes__item blockquote {
+  margin: 0 0 14px;
+  color: var(--text);
+  font: 500 15px/1.6 var(--body);
+}
+.makerworld-quotes__item cite {
+  display: block;
+  font: normal 10px/1.5 var(--mono);
+  color: var(--secondary);
+}
+.makerworld-quotes__item a {
+  display: inline-block;
+  min-height: 44px;
+  padding-block: 12px;
+  color: var(--link);
+  font: 10px/1.7 var(--mono);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.makerworld-quotes__item a:focus-visible,
+.makerworld-quotes__rail:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .makerworld-quotes__rail { scroll-behavior: auto; }
+}
+
+.makerworld-quotes__build{display:block;margin-bottom:10px;color:var(--accent);font:700 10px/1.5 var(--mono);letter-spacing:.08em;text-transform:uppercase}

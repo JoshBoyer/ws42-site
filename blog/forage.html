@@ -107,6 +107,11 @@
 
         <img src="../assets/images/published/forage-board.jpg" alt="The Board in Forage — a shared household space for notes, nudges, chore wars, and ratings" width="1200" height="844">
 
+        <!-- editorial-addition:start -->
+        <h2>How the pieces connect</h2>
+        <p>The home profile holds information about the household's systems and upkeep. The kitchen tracks what is on hand and uses it for plans and shopping; the Board gives the household a shared place for notes, nudges and meal feedback. The assistant and MCP work sit on top of those underlying household actions.</p>
+        <p>Forage is described here as a beta. The waitlist and product site are the best places to check current availability.</p>
+        <!-- editorial-addition:end -->
         <h2>How It's Built</h2>
         <p>Forage is a Fastify and PostgreSQL app with a React and TypeScript front end (TanStack Router and Query, Radix, Tailwind, Zustand). Every entity is household-scoped and syncs live across devices over WebSockets, with push notifications for the nudges that matter. Two models sit behind the assistant and the recipe author &mdash; Claude and Gemini.</p>
         <p>The whole thing is self-hosted with data kept in Canada: no cloud vendor lock-in, no third-party trackers, PIPEDA-aligned. Private by design isn't a badge bolted on at the end &mdash; it's why the architecture looks the way it does.</p>

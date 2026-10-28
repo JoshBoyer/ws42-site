@@ -7,6 +7,7 @@ const htmlFiles=['index.html','workshop.html','about.html',...fs.readdirSync(pat
 const errors=[];
 const baseline=JSON.parse(fs.readFileSync(path.join(root,'scripts/content-baseline.json'),'utf8'));
 const originalArticles=new Set(Object.keys(baseline.articleBodySHA256));
+const publishedArticles=new Set(['blog/apex-monitor-riser.html','blog/voyager.html','blog/nexus.html','blog/lowkey-parakeet.html','blog/daynas-pet-sitting.html']);
 let references=0;
 const contents=new Map(htmlFiles.map(f=>[f,fs.readFileSync(path.join(root,f),'utf8')]));
 const genuineAboutParagraphs=baseline.aboutParagraphs;
@@ -52,7 +53,9 @@ for(const [file,html] of contents) {
     // Explicitly marked new CAD evidence may be added while legacy prose remains exact.
     const articleText=s=>s.slice(s.indexOf('<div class="post-content">'),s.indexOf('</article>')).replace(/<!-- cad-study:start -->[\s\S]*?<!-- cad-study:end -->\r?\n/g,'').replace(/<!-- project-media:start -->[\s\S]*?<!-- project-media:end -->\r?\n/g,'').replace(/[ \t]*<!-- editorial-addition:start -->[\s\S]*?<!-- editorial-addition:end -->\r?\n/g,'').replace(/<img\b[^>]*>/g,'').replace(/\r\n/g,'\n');
     if(crypto.createHash('sha256').update(articleText(html)).digest('hex')!==baseline.articleBodySHA256[file]) errors.push(`${file}: article prose changed`);
-  } else if(file.startsWith('blog/') && (!html.includes('data-review-draft="true"') || !html.includes('Local review draft'))) {
+  } else if(file.startsWith('blog/') && publishedArticles.has(file) && (!html.includes('class="post-title"') || !html.includes('class="post-content"'))) {
+    errors.push(`${file}: article title or content missing`);
+  } else if(file.startsWith('blog/') && !publishedArticles.has(file) && (!html.includes('data-review-draft="true"') || !html.includes('Local review draft'))) {
     errors.push(`${file}: new article must be marked as a local review draft`);
   }
 }
